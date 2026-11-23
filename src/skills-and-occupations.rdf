@@ -1,0 +1,163 @@
+﻿<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17/"
+     xml:base="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17/"
+     xmlns:kg="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#awardedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#awardedTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#DegreeAward"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#Person"/>
+        <rdfs:comment>Links a degree award to the person who earned it.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#heldBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#heldBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#JobPosition"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#involvesOccupation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#involvesOccupation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#JobPosition"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#Occupation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#requiresEssentialSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#requiresEssentialSkill">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#Occupation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#Skill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#annualSalary -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#annualSalary">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#JobPosition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Gross annual pay in euros.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#countryCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#countryCode">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#JobPosition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Two-letter country code of the job position, such as GR for Greece.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#gpa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#gpa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#DegreeAward"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Grade point average for the awarded degree.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#yearsOfExperience -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#yearsOfExperience">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>Current total years of work experience.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#DegreeAward -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#DegreeAward">
+        <rdfs:comment>A degree earned by a specific person.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#JobPosition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#JobPosition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#Occupation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#Occupation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#Person">
+        <rdfs:comment>A person involved in the job-market or the academia</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#Skill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mario/ontologies/2026/10/untitled-ontology-17#Skill"/>
+    
+
+
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
