@@ -11,3 +11,12 @@ wheels/
 
 # Assignment instructions
 assignment3_Giannakopoulos/
+
+# Generated data and pipeline outputs
+data/processed/
+outputs/
+
+# Local credentials
+.env
+.env.*
+!.env.example
