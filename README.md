@@ -30,10 +30,39 @@ Use Python 3.13 or newer. With [uv](https://docs.astral.sh/uv/), run:
 
 ```bash
 uv sync
+cp .env.example .env
 ```
 
-No pipeline or command-line entry point is implemented yet, and no third-party
-runtime dependencies have been selected.
+No pipeline or command-line entry point is implemented yet.
+
+### Data paths in notebooks
+
+The `.env.example` template sets `DATA_DIR=data`. Your local `.env` is ignored by
+Git; edit it if your data lives elsewhere. Relative paths are resolved against
+the directory containing `.env`, and absolute paths are also supported.
+
+Run notebooks with the project's Python environment and a working directory
+inside this repository (either the root or a subdirectory), then use:
+
+```python
+import os
+from pathlib import Path
+from dotenv import find_dotenv, load_dotenv
+
+env_file = find_dotenv(usecwd=True)
+if not env_file:
+    raise FileNotFoundError("Copy .env.example to .env before running.")
+
+project_root = Path(env_file).resolve().parent
+load_dotenv(env_file)
+data_dir = project_root / Path(os.environ["DATA_DIR"]).expanduser()
+
+job_posts_path = data_dir / "raw" / "job_posts.csv"
+```
+
+Environment variables already set in your session take precedence over `.env`.
+When sharing this repository, include `.env.example` so each person can create
+their own `.env` without machine-specific paths.
 
 ## Assignment tasks
 
